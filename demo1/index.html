@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
+<script src="./vue.js"></script>
+
 <body>
+  <div id="root">
+    <h1>Hello {{name}}</h1>
+  </div>
+  <script>
+      let x = new Vue({
+        el:'#root', // el 用于指定当前vue实例为哪个容器服务，通常为css选择器的字符
+        data:{
+          // data中用于存储数据，数据提供el去使用
+          name:'niema',
+        }
+
+      })
+      // 配置对象
     
+      console.log(x);
+  </script>
 </body>
+
 </html>
